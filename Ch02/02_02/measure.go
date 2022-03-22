@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-func timeit(name string) func() {
-	start := time.Now()
+func timeit(start time.Time, name string) func() {
+	// start := time.Now()
 
 	return func() {
 		duration := time.Since(start)
@@ -16,7 +16,7 @@ func timeit(name string) func() {
 }
 
 func dot(v1, v2 []float64) (float64, error) {
-	defer timeit("dot")()
+	defer timeit(time.Now(), "dot");
 
 	if len(v1) != len(v2) {
 		return 0, fmt.Errorf("dot of different size vectors")

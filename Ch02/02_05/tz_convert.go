@@ -23,4 +23,17 @@ func main() {
 
 	nycTime := chiTime.In(nyc)
 	fmt.Println("NYC:", nycTime) // NYC: 2021-02-28 20:30:00 -0500 EST
+
+	tok, err := time.LoadLocation("Asia/Tokyo");
+	if err != nil {
+		fmt.Printf("error loading location : %s\n", err);
+		return;
+	}
+
+	tokTime := time.Now().In(tok);
+	fmt.Println("TOK:", tokTime)
+
+	utcTime := time.Now().In(time.UTC);
+	fmt.Println("UTC:", utcTime)
+
 }

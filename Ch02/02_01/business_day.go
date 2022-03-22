@@ -36,4 +36,10 @@ func main() {
 	fmt.Println(date, date.Weekday()) // 2022-01-04 00:00:00 +0000 UTC Tuesday
 	nbd = nextBusinessDay(date)
 	fmt.Println(nbd, nbd.Weekday()) // 2022-01-05 00:00:00 +0000 UTC Wednesday
+
+	date = time.Now();
+	fmt.Println(date, date.Weekday()) // 2022-01-04 00:00:00 +0000 UTC Tuesday
+	nbd = nextBusinessDay(date)
+	fmt.Println(nbd, nbd.Weekday()) // 2022-01-05 00:00:00 +0000 UTC Wednesday
+
 }
