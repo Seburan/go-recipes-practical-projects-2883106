@@ -13,14 +13,14 @@ func ExampleCommaOK() {
 	if ok {
 		fmt.Printf("The price of Banana is $%d\n", price)
 	} else {
-		fmt.Printf("We don't have Bananas")
+		fmt.Printf("We don't have Bananas\n")
 	}
 
 	price, ok = prices["Apple"]
 	if ok {
 		fmt.Printf("The price of Apple is $%d\n", price)
 	} else {
-		fmt.Printf("We don't have Apples")
+		fmt.Printf("We don't have Apples\n")
 	}
 
 	// Output:

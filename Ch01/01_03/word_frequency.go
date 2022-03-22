@@ -6,6 +6,7 @@ import (
 
 func main() {
 	fmt.Println(frequency(moby))
+	ExampleCommaOK();
 }
 
 func frequency(words []string) map[string]int {
@@ -16,6 +17,7 @@ func frequency(words []string) map[string]int {
 
 	return freq
 }
+
 
 var moby = []string{
 	"call", "me", "ishmael", "some", "years", "ago", "never", "mind", "how",
